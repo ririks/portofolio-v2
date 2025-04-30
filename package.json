@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "postinstall": "chmod +x node_modules/.bin/vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "vite": "^6.3.4",
     "@fontsource/outfit": "^5.2.5",
     "@fontsource/roboto": "^5.2.5",
-    "vite": "^6.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -22,5 +22,6 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3"  }
+    "eslint-plugin-react-refresh": "^0.4.3"
+  }
 }
