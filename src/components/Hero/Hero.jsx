@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
 
+
 export const Hero = () => {
   return (
     <section className={styles.container}>
@@ -14,7 +15,7 @@ export const Hero = () => {
         </a>
       </div>
       <img
-        src="/dist/hero/heroImage.png"
+        src="/assets/hero/heroImage.png"
         alt="Hero image of me"
         className={styles.heroImg}
       />
