@@ -92,71 +92,96 @@ section {
 .social-media a {
     display: inline-block;
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
-    transition: color 0.3s;
+    background-color: #333; /* Warna latar belakang ikon */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 kolom dalam satu baris */
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .project-box {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-info {
+    padding: 1rem;
+    text-align: center;
+  }
 
-.project-box {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-}
-
-.project-box img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-}
-
-.project-info {
-  padding: 1rem;
-  text-align: center;
+.projects h2 {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    font-size: 2.5rem; /* Membesarkan ukuran font */
+    margin-bottom: 1.5rem; /* Memberikan jarak di bawah judul */
+    color: #ffffff; /* Warna teks */
 }
 
 .project-info h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.project-info p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .project-info p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar menengah */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects-container {
+      grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+    }
+  }
 .social-media a:hover {
     color: #0ef;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Ukuran sedikit lebih kecil */
     background: #0ef;
     color: #1f242d;
-    border-radius: 5px;
+    border-radius: 25px; /* Membuat tombol lebih bulat */
     font-weight: 500;
     transition: background 0.3s;
+    margin-top: 20px; /* Memberikan jarak dengan elemen sebelumnya (sosial media) */
 }
 
 .btn:hover {
-    background: #0dc;
+    background: #00bcd4; /* Warna latar belakang saat hover */
 }
 
 .home-img img {
@@ -236,31 +261,43 @@ section {
     margin-bottom: 15px;
 }
 
-/* Activity Section */
-.activity {
+/* Sertifikat Section */
+.certificate {
     text-align: center;
 }
 
-.activity h2 {
+.certificate h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
-.activity .btn {
-    margin-top: 20px;
-}
-
-/* Contact Section */
-.contact h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.contact form {
+.certificate-frame {
+    display: block;
+    width: 70%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    border: 10px solid #0ef;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.certificate-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.certificate-frame:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
+}
+
 
 .input-box {
     display: flex;
