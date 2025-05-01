@@ -1,13 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
-  </body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <!-- Link ke CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link ke ikon dari Boxicons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Header dan Navigasi -->
+    <header class="header">
+        <a href="#" class="logo">Portofolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+          <a href="#home" class="active">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#skills">Keterampilan</a>
+          <a href="#activity">Aktivitas</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </header>
+      
+
+    <!-- Bagian Beranda -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Halo, Saya</h3>
+            <h1>Nama Anda</h1>
+            <h3>Dan Saya <span class="multiple-text">Web Developer</span></h3>
+            <p>Deskripsi singkat tentang diri Anda.</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="CV.pdf" class="btn">Unduh CV</a>
+        </div>
+        <div class="home-img">
+            <img src="images/home.jpg" alt="Foto Profil">
+        </div>
+    </section>
+
+    <!-- Bagian Tentang -->
+    <!-- Bagian Projek -->
+<section class="projects" id="about">
+  <h2 class="heading">Projek <span>Saya</span></h2>
+  <div class="projects-container">
+      <div class="project-box" onclick="window.open('https:link-ke-projek1.com', '_blank')">
+          <img src="images/figma1.png" alt="Projek 1">
+          <div class="project-info">
+              <h3>Projek 1</h3>
+              <p>Deskripsi singkat tentang projek ini.</p>
+          </div>
+      </div>
+      <div class="project-box" onclick="window.open('https:link-ke-projek1.com', '_blank')">
+        <img src="images/projek1-thumbnail.jpg" alt="Projek 1">
+          <div class="project-info">
+              <h3>Projek 2</h3>
+              <p>Deskripsi singkat tentang projek ini.</p>
+          </div>
+      </div>
+      <!-- Tambahkan proyek lain di sini -->
+  </div>
+</section>
+
+
+    <!-- Bagian Keterampilan -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Keterampilan <span>Saya</span></h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Pengembangan Web</h3>
+                <p>Deskripsi singkat tentang keterampilan ini.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="skills-box">
+                <i class='bx bx-paint'></i>
+                <h3>Desain Grafis</h3>
+                <p>Deskripsi singkat tentang keterampilan ini.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="skills-box">
+                <i class='bx bx-data'></i>
+                <h3>Struktur Data</h3>
+                <p>Deskripsi singkat tentang keterampilan ini.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Aktivitas -->
+    <section class="activity" id="activity">
+        <h2 class="heading">Laporan <span>Aktivitas</span></h2>
+        <button class="btn" onclick="window.open('AICTEREPORT.pdf','_blank')">Lihat Laporan</button>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Hubungi <span>Saya!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Nama Lengkap">
+                <input type="email" placeholder="Alamat Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Nomor Telepon">
+                <input type="text" placeholder="Subjek Email">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Pesan Anda"></textarea>
+            <input type="submit" value="Kirim Pesan" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© 2025 Nama Anda. Semua Hak Dilindungi.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- Link ke JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
 </html>
