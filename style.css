@@ -381,6 +381,13 @@ textarea {
     flex-wrap: wrap;
 }
 
+.footer-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-text p {
     font-size: 14px;
 }
