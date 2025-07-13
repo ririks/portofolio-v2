@@ -71,22 +71,24 @@ section {
 }
 
 .home-img {
-    width: 250px; /* ukuran lebih kecil */
+    width: 250px;
     height: 250px;
-    border-radius: 50%; /* bulat */
+    border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #0ef; /* warna frame */
+    border: 5px solid #0ef;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    flex-shrink: 0;
 }
 
 .home-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center; /* Atau sesuaikan posisinya */
+    object-position: center center;
+    border-radius: 50%;
 }
 
 .home-content h3 {
@@ -113,13 +115,85 @@ section {
     margin-right: 15px;
     font-size: 30px;
     color: #fff;
-    background-color: #333; /* Warna latar belakang ikon */
+    background-color: #333;
     width: 50px;
     height: 50px;
     line-height: 50px;
-    border-radius: 50%; /* Membuat bentuk lingkaran */
+    border-radius: 50%;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #0ef;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #0ef;
+    color: #1f242d;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background: #00bcd4;
+}
+
+/* Projects Section */
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-box {
+    background: #1f242d;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1.5px solid #ffffff;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.project-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .tool-tags {
@@ -128,9 +202,9 @@ section {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.5rem;
-  }
-  
-  .tool-tags span {
+}
+
+.tool-tags span {
     background-color: #f1f1f1;
     color: #333;
     padding: 0.3rem 0.7rem;
@@ -138,94 +212,6 @@ section {
     font-size: 0.8rem;
     font-weight: 500;
     border: 1px solid #ccc;
-  }  
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 kolom dalam satu baris */
-    gap: 2rem;
-    padding: 2rem 0;
-  }
-  
-  .project-box {
-    background: #1f242d;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1.5px solid #ffffff; /* Warna putih tipis transparan */
-  }  
-  
-  .project-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-box img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-  }
-  
-  .project-info {
-    padding: 1rem;
-    text-align: center;
-  }
-
-.projects h2 {
-    text-align: center; /* Menyelaraskan teks ke tengah */
-    font-size: 2.5rem; /* Membesarkan ukuran font */
-    margin-bottom: 1.5rem; /* Memberikan jarak di bawah judul */
-    color: #ffffff; /* Warna teks */
-}
-
-.project-info h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: #ffffff;
-  }
-  
-  .project-info p {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  @media (max-width: 768px) {
-    .projects-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar menengah */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .projects-container {
-      grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
-    }
-  }
-.social-media a:hover {
-    color: #0ef;
-}
-
-.btn {
-        display: inline-block;
-        padding: 8px 16px;
-        background: #0ef;
-        color: #1f242d;
-        border-radius: 25px;
-        font-weight: 500;
-        transition: background 0.3s;
-        margin-top: 30px; /* Tambahkan jarak dari elemen sebelumnya */
-    }
-     /* Memberikan jarak dengan elemen sebelumnya (sosial media) */
-
-.btn:hover {
-    background: #00bcd4; /* Warna latar belakang saat hover */
-}
-
-.home-img img {
-    width: 400px;
-    border-radius: 10px;
 }
 
 /* About Section */
@@ -300,7 +286,7 @@ section {
     margin-bottom: 15px;
 }
 
-/* Sertifikat Section */
+/* Certificate Section */
 .certificate {
     text-align: center;
 }
@@ -318,7 +304,7 @@ section {
     margin: 0 auto 20px;
     border: 2px solid #0ef;
     border-radius: 15px;
-    overflow: hidden; /* Ini penting agar gambar mengikuti lengkungan */
+    overflow: hidden;
     padding: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -327,19 +313,18 @@ section {
 .certificate-frame img {
     width: 100%;
     height: auto;
-    display: block; /* Menghilangkan jarak bawah default */
-    border-radius: 0; /* Tidak perlu, karena frame sudah mengatur lengkungan */
-    transform: scale(1.02); /* Perbesar sedikit jika ingin efek dramatis */
+    display: block;
+    border-radius: 0;
+    transform: scale(1.02);
     transition: transform 0.3s ease;
 }
 
-/* Hover effect */
 .certificate-frame:hover {
     transform: scale(1.03);
     box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
 }
 
-
+/* Contact Section */
 .input-box {
     display: flex;
     gap: 20px;
@@ -410,11 +395,23 @@ textarea {
         flex-direction: column;
         text-align: center;
     }
-
+    
+    .home-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+    
     .home-img img {
-        width: 100%;
-        max-width: 200px;
-        margin-top: 10px;
+        object-position: center top;
+    }
+    
+    .btn {
+        margin-top: 25px;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .about {
@@ -455,5 +452,32 @@ textarea {
 
     .navbar a {
         margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .home-img img {
+        object-position: center 20%;
+    }
+    
+    .btn {
+        margin-top: 20px;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-img {
+        width: 120px;
+        height: 120px;
     }
 }
