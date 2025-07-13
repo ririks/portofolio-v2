@@ -406,26 +406,17 @@ textarea {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .home-img {
-      width: 150px; /* ukuran lebih kecil untuk mobile */
-      height: 150px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid #0ef;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    .home {
+        flex-direction: column;
+        text-align: center;
     }
-  
+
     .home-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* mencegah pemotongan */
-      object-position: center center; /* posisi tengah */
-      border-radius: 50%;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
     }
-  
+
     .about {
         flex-direction: column;
         text-align: center;
@@ -465,12 +456,4 @@ textarea {
     .navbar a {
         margin: 10px 0;
     }
-
 }
-
-@media (max-width: 768px) {
-    .btn {
-      margin-top: 20px; /* Menambahkan jarak antara foto dan tombol */
-    }
-  }
-  
