@@ -406,9 +406,6 @@ textarea {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .btn {
-          margin-top: 20px; /* Menambahkan jarak antara foto dan tombol */
-        }     
     .home-img {
       width: 150px; /* ukuran lebih kecil untuk mobile */
       height: 150px;
@@ -470,3 +467,10 @@ textarea {
     }
 
 }
+
+@media (max-width: 768px) {
+    .btn {
+      margin-top: 20px; /* Menambahkan jarak antara foto dan tombol */
+    }
+  }
+  
